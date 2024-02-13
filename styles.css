@@ -7,27 +7,136 @@
 }
 
 body {
-    background-image: url(bg-image.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-
-main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
 }
 
-.title {
-    font-size: 64px;
-    text-align: center;
-    max-width: 640px;
-    color: #FFFFFF;
+main {
+    background-image: url(bg-image.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100vh; */
+    max-width: 1280px;
+    min-width: 640px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-items: center;
 
+    padding: 20px 80px;
+}
+
+.header {
+    line-height: 60px;
+    text-align: center;
+    color: #FFFFFF;
+    min-width: 640px;
+    padding: 50px 200px;
+}
+
+.header>h1 {
+    font-size: 64px;
+
+}
+
+.header>p {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #FFFFFF55;
+    margin: 0 150px;
+    padding: 15px 20px;
+    border-radius: 20px;
+
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    align-items: center;
+    justify-items: center;
+    /* flex-direction: column; */
+
+    gap: 10px;
+    /* width: 640px; */
+}
+
+.field {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.field>label {
+    font-size: 14px;
+}
+
+.field>input {
+    border-color: transparent;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.field>input::placeholder {
+    color: #CDD5E0;
+}
+
+.field>select {
+    border-color: transparent;
+    border-radius: 10px;
+    padding: 15px;
+    font-weight: 700;
+}
+.message-field{
+    padding: 0;
+    margin: 10px 0;
+}
+#message{
+    height: 150px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 button {
     color: #4036A9;
+    width: 100%;
+    background-color: #FFFFFF;
+    font-size: 20px;
+    padding: 10px;
+    border-color: transparent;
+    border-radius: 10px;
+    font-weight: 700;
+}
+@media (width<1024px) {
+    main{
+        width: 640px;
+        padding:20px;
+        margin-left: 20px;
+       }
+       .header{
+           line-height: 40px;
+           padding: 0;
+       }
+       .header>h1 {
+           font-size: 46px;
+       }
+       .header>p {
+           font-size: 16px;
+   
+       }
+       form {
+           margin: 100px;
+       
+     
+       }
 }
